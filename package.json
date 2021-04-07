@@ -1,0 +1,15 @@
+{
+  "name": "scratch-webgl",
+  "version": "1.0.0",
+  "description": "WebGL tutorial",
+  "main": "index.html",
+  "repository": "git@github.com:c3s4/scratch-webgl.git",
+  "author": "Davide Cesaroni <davide.cesaroni@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  },
+  "scripts": {
+    "start": "live-server ./src/"
+  }
+}
