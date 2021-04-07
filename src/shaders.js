@@ -15,7 +15,7 @@ void main() {
 }
 `;
 
-export const  loadShader = (gl, type, source) => {
+export const loadShader = (gl, type, source) => {
   const shader = gl.createShader(type);
 
   // Send the source to the shader object
@@ -37,7 +37,7 @@ export const  loadShader = (gl, type, source) => {
   }
 
   return shader;
-}
+};
 
 export const initShaderProgram = (gl, vsSource, fsSource) => {
   const vertexShader = loadShader(gl, gl.VERTEX_SHADER, vsSource);
@@ -53,9 +53,12 @@ export const initShaderProgram = (gl, vsSource, fsSource) => {
   // If creating the shader program failed, alert
 
   if (!gl.getProgramParameter(shaderProgram, gl.LINK_STATUS)) {
-    alert('Unable to initialize the shader program: ' + gl.getProgramInfoLog(shaderProgram));
+    alert(
+      "Unable to initialize the shader program: " +
+        gl.getProgramInfoLog(shaderProgram)
+    );
     return null;
   }
 
   return shaderProgram;
-}
+};
